@@ -31,7 +31,6 @@ try
 
             if (children.ValueKind == JsonValueKind.Array)
             {
-                // Iterate over the children of the array
                 var folder = children
                     .EnumerateArray()
                     .Where(c => c.TryGetProperty("name", out JsonElement folderName) && folderName.GetString() == "Vidapay-Stack")
